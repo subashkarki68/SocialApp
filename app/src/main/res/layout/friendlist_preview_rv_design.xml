@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/friend_preview_individual_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_8mdp"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/friendlist_preview_friend_profile_image"
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_60mdp"
+            android:src="@drawable/profile_pic"
+            app:civ_border_color="@color/primaryColor"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/friendlist_preview_friend_profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="@dimen/_10font_mdp"
+            app:autoSizeMaxTextSize="@dimen/_16font_mdp"
+            app:autoSizeMinTextSize="@dimen/_10font_mdp"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

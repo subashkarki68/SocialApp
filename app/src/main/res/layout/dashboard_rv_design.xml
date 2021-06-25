@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_16mdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashboard_top_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/dashboard_more_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/dashboard_others_profile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dashboard_others_profile_image"
+            app:tint="@color/primaryColor"
+            app:srcCompat="@drawable/ic_more" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dashboard_others_profile_image"
+            android:layout_width="@dimen/_50mdp"
+            android:layout_height="@dimen/_50mdp"
+            android:layout_marginStart="@dimen/_8mdp"
+            android:layout_marginTop="@dimen/_8mdp"
+            android:src="@drawable/profile_pic"
+            app:civ_border_color="@color/primaryColor"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_others_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12font_mdp"
+            android:text="Magician"
+            app:layout_constraintStart_toStartOf="@+id/dashboard_others_name"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_others_name" />
+
+        <TextView
+            android:id="@+id/dashboard_others_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:layout_marginStart="@dimen/_8mdp"
+            android:layout_marginTop="@dimen/_2mdp"
+            android:text="Harry Porter"
+            android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/_20font_mdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/dashboard_others_profile_image"
+            app:layout_constraintTop_toTopOf="@+id/dashboard_others_profile_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/dashboard_post_image"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_180mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_photo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dashboard_top_row"
+        app:riv_mutate_background="true" />
+
+    <TextView
+        android:id="@+id/favourite_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:textSize="@dimen/_10font_mdp"
+        android:gravity="center"
+        android:text="123"
+        app:drawableStartCompat="@drawable/ic_favourite"
+        app:drawableTint="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="@id/dashboard_post_image"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_post_image" />
+
+    <TextView
+        android:id="@+id/comment_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:textSize="@dimen/_10font_mdp"
+        android:gravity="center"
+        android:text="123"
+        app:drawableStartCompat="@drawable/ic_comment"
+        app:drawableTint="@color/primaryColor"
+        app:layout_constraintStart_toEndOf="@id/favourite_ic"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_post_image" />
+
+    <TextView
+        android:id="@+id/share_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:textSize="@dimen/_10font_mdp"
+        android:gravity="center"
+        android:text="123"
+        app:drawableStartCompat="@drawable/ic_share"
+        app:drawableTint="@color/primaryColor"
+        app:layout_constraintStart_toEndOf="@id/comment_ic"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_post_image"
+        app:tint="@color/primaryColor" />
+
+    <ImageView
+        android:id="@+id/bookmark_iciv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="@+id/dashboard_post_image"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_post_image"
+        app:srcCompat="@drawable/ic_bookmark"
+        app:tint="@color/primaryColor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

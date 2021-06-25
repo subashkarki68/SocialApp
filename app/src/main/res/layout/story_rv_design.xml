@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_16mdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/others_story_image"
+        android:layout_width="@dimen/_120mdp"
+        android:layout_height="@dimen/_85mdp"
+        android:layout_marginEnd="@dimen/_16mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_photo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="10dip"
+        app:riv_mutate_background="true" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/others_profile_image"
+        android:layout_width="@dimen/_35mdp"
+        android:layout_height="@dimen/_35mdp"
+        android:layout_marginStart="@dimen/_4mdp"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:src="@drawable/profile_pic2"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="@+id/others_story_image"
+        app:layout_constraintTop_toTopOf="@id/others_story_image" />
+
+    <ImageView
+        android:id="@+id/story_type_image_view"
+        android:layout_width="@dimen/_25mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginEnd="@dimen/_8mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/others_profile_image"
+        app:layout_constraintEnd_toEndOf="@id/others_story_image"
+        app:layout_constraintTop_toTopOf="@id/others_story_image"
+        app:layout_constraintVertical_bias="0.10"
+        app:srcCompat="@drawable/ic_live" />
+
+    <TextView
+        android:id="@+id/others_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_shading"
+        android:paddingStart="@dimen/_8mdp"
+        android:paddingEnd="@dimen/_8mdp"
+        android:paddingBottom="@dimen/_4mdp"
+        android:text="John Cena"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_10font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/others_story_image"
+        app:layout_constraintEnd_toEndOf="@+id/others_story_image"
+        app:layout_constraintStart_toStartOf="@+id/others_story_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>
